@@ -46,5 +46,13 @@ class Song
     songs = Song.all.sort { |a, b| a.name <=> b.name }
   end
 
+  def self.new_from_filename(filename)
+    artist_name = filename.split(" - ")[0]
+    title_name = filename.split(" - ")[1]
+    genre_name = filename.split(" - ")[2].gsub(".mp3", "")
 
+    artist = Artist.find_or_create_by_name(artist_name)
+    genre = Genre.find_or_create_by_name(genre_name)
+    song = Song.new(title_name, artist, genre)
+  end
 end
