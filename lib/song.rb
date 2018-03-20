@@ -51,6 +51,6 @@ class Song
     title_name = filename.split(" - ")[1].gsub(".mp3", "")
 
     artist = Artist.find_or_create_by_name(artist_name)
-    song = Song.new(title_name, artist, genre)
+    song = Song.new(title_name, artist)
   end
 end
