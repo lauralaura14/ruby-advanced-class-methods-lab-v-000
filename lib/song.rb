@@ -52,6 +52,6 @@ class Song
 
     song = self.new
     song.name = title_name
-    song.artist_name = artist_name
+    song.artist_name = artist_name\song
   end
 end
