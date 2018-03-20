@@ -43,7 +43,7 @@ class Song
   end
 
   def list_songs
-    self.all.sort { |song| song.name }
+    self.all.sort { |song| Song.name }
 
   end
 
