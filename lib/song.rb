@@ -43,8 +43,8 @@ class Song
   end
 
   def list_songs
-    songs = Song.all.sort { |a, b| a.name <=> b.name }
-    songs
+    Song.all.sort { |a, b| a.name <=> b.name }
+
   end
 
 end
